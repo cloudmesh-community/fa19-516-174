@@ -8,5 +8,7 @@
 6. Secondary activities such as buying food, electronics, furniture, etc, all sum up to 2.99 metric tons.
 7. My carbon footprint is 10.85 metric tons, i.e., 23920.155lbs of carbon emission.
 
+### E.Datacenter.4:
 
+4. Recyclers
 
