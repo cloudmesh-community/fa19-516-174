@@ -44,9 +44,9 @@ The online services disrupted include food delivery and streaming services as we
 
 ### References:
 
-[1]https://www.datacenterknowledge.com/data-centers-that-recycle-waste-heat
-[2]https://media10.connectedsocialmedia.com/intel/09/5601/Intel_IT_Green_IT_Sustainability_Data_Center_Heat_Recovery.pdf
-[3]https://ww2.energy.ca.gov/renewables/
-[4]https://www.npr.org/2018/09/10/646373423/california-sets-goal-of-100-percent-renewable-electric-power-by-2045
-[5]https://www.forbes.com/sites/arielcohen/2018/09/21/californias-new-100-green-energy-target-may-do-more-harm-than-good/#6d03ba04675e
-[6]https://www.smh.com.au/technology/web-chaos-mostly-over-after-amazon-web-services-hit-by-power-outage-during-sydney-storm-20160606-gpc707.html
+1. [1]https://www.datacenterknowledge.com/data-centers-that-recycle-waste-heat
+2. [2]https://media10.connectedsocialmedia.com/intel/09/5601/Intel_IT_Green_IT_Sustainability_Data_Center_Heat_Recovery.pdf
+3. [3]https://ww2.energy.ca.gov/renewables/
+4. [4]https://www.npr.org/2018/09/10/646373423/california-sets-goal-of-100-percent-renewable-electric-power-by-2045
+5. [5]https://www.forbes.com/sites/arielcohen/2018/09/21/californias-new-100-green-energy-target-may-do-more-harm-than-good/#6d03ba04675e
+6. [6]https://www.smh.com.au/technology/web-chaos-mostly-over-after-amazon-web-services-hit-by-power-outage-during-sydney-storm-20160606-gpc707.html
