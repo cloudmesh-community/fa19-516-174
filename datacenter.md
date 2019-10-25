@@ -29,6 +29,17 @@ While these efforts are going to pay off in the long term, the immediate impact 
 
 ### E.Datacenter.8:
 
+A major datacenter outage that happened was in Sydney. It affected most of the services in Australia and life was almost brought to a standstill.
+Date: June 2016
+Datacenter: AWS
+Category: Severe Weather
+Description: Storms led to a power outage and eventually failure of service instances.
+Duration: 10 hours
+Impact: Severe
+A large number of businesses were affected by this datacenter outage. Some of the big names include Domino's Pizza, Foxtel, Westpac, Bank of Queensland, Me Bank, IMB Bank, etc. 
+While some recovered quick enough, banking services were disrupted and bank cards couldn't be used temporarily. This led to a major part of the citizens lives coming to a standstill as they were unable to pay for any services provided.[6]
+The online services disrupted include food delivery and streaming services as well.
+
 
 ### References:
 
@@ -37,3 +48,4 @@ While these efforts are going to pay off in the long term, the immediate impact 
 [3]https://ww2.energy.ca.gov/renewables/
 [4]https://www.npr.org/2018/09/10/646373423/california-sets-goal-of-100-percent-renewable-electric-power-by-2045
 [5]https://www.forbes.com/sites/arielcohen/2018/09/21/californias-new-100-green-energy-target-may-do-more-harm-than-good/#6d03ba04675e
+[6]https://www.smh.com.au/technology/web-chaos-mostly-over-after-amazon-web-services-hit-by-power-outage-during-sydney-storm-20160606-gpc707.html
