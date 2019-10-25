@@ -27,15 +27,16 @@ California now fulfills a huge part of its electricity needs from these renwable
 
 While these efforts are going to pay off in the long term, the immediate impact on the society can have a detrimental affect. The people in the state are already paying 50% over the national average for electricity. This aggressive shift towards green sources can end up being expensive as well. Irregular generation of energy means that this excess energy would have to be stored for future use. In another scenario, if no energy is generated at all, they would need to have oil or natural gas based power plants on standby for such emergencies. However, the public at large still does support these policies while probably not fully understanding the consequences.[5]
 
+
 ### E.Datacenter.8:
 
 A major datacenter outage that happened was in Sydney. It affected most of the services in Australia and life was almost brought to a standstill.
-Date: June 2016
-Datacenter: AWS
-Category: Severe Weather
-Description: Storms led to a power outage and eventually failure of service instances.
-Duration: 10 hours
-Impact: Severe
+1. Date: June 2016
+2. Datacenter: AWS
+3. Category: Severe Weather
+4. Description: Storms led to a power outage and eventually failure of service instances.
+5. Duration: 10 hours
+6. Impact: Severe
 A large number of businesses were affected by this datacenter outage. Some of the big names include Domino's Pizza, Foxtel, Westpac, Bank of Queensland, Me Bank, IMB Bank, etc. 
 While some recovered quick enough, banking services were disrupted and bank cards couldn't be used temporarily. This led to a major part of the citizens lives coming to a standstill as they were unable to pay for any services provided.[6]
 The online services disrupted include food delivery and streaming services as well.
