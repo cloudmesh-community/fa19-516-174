@@ -8,6 +8,8 @@ Creating REST services using open API.
 
 ## Introduction
 
+We set up a Raspberry pi cluster and integrate Kubernetes. We then implement REST services using open API and deploy AI services on them.
+
 ## Related Work
 
 ## Architecture
