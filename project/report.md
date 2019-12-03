@@ -1,4 +1,4 @@
-# AI Services With Raspberry Pi
+# AI REST Services using Open API
 
 Sahithi Ancha, sancha@iu.edu, [fa19-516-174](https://github.com/cloudmesh-community/fa19-516-174)
 
@@ -8,7 +8,7 @@ Creating REST services using open API.
 
 ## Introduction
 
-We set up a Raspberry pi cluster and integrate Kubernetes. We then implement REST services using open API and deploy AI services on them.
+We implement REST services using open API and deploy AI services on them.
 
 ## Related Work
 
@@ -16,27 +16,24 @@ We set up a Raspberry pi cluster and integrate Kubernetes. We then implement RES
 
 ## Technologies used
 
-* cm-burn
-* cloudmesh-inventory
+* cloudmesh
 * Python
 * REST
-
+* Open API
 
 ## Progress
 
-* Burning SD Cards using Etcher on Windows
-* Setting up the cluster
+* Set up the computer
+* Installed cloudmesh
+* Set up MongoDB
+* Wrote API programs for 4 AI services
 
 ## Benchmark and Evaluation 
 
-* Develop a test program to review 
-* Use PyTest
+* Access and use the AI services 
 
 ## Conclusion
 
 ## References
 
-* <https://raspberrytips.com/install-raspbian-raspberry-pi/>
-* <https://raspberrytips.com/raspberry-pi-cluster/>
-* <https://dev.to/awwsmm/building-a-raspberry-pi-hadoop-spark-cluster-8b2>
-* <https://dqydj.com/raspberry-pi-hadoop-cluster-apache-spark-yarn/>
+* 
