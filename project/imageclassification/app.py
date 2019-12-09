@@ -3,7 +3,7 @@ from flask_restful import Api, Resource
 from pymongo import MongoClient
 import numpy
 import keras
-import requests
+import requests 
 import subprocess
 import json
 
@@ -25,8 +25,8 @@ class Classify(Resource):
         with open('temp.jpg', 'wb') as f:
             f.write(r.content)
             proc = subprocess.Popen('python classify.py --model_dir=. --image_file=./temp.jpg', stdout=subprocess.PIPE, stderr=subprocess.STDOUT, shell=True)
-            ret = proc.communicate()[0]
-            proc.wait()
+#            ret = proc.communicate()[0]
+#            proc.wait()
             with open("text.txt") as f:
                 retJson = json.load(f)
 
