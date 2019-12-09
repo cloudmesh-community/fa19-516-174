@@ -20,6 +20,8 @@ We implement REST services using open API and deploy AI services on them.
 * Python
 * REST
 * Open API
+* Flask
+* MongoDB
 
 ## Progress
 
