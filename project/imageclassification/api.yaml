@@ -1,0 +1,49 @@
+openapi: 3.0.2
+info:
+  title: Image Classification App
+  description: This is a web service for image classification
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
+  version: 0.0.1
+
+servers:
+  - url: http://localhost:8080/imageclassification
+
+paths:
+  /upload:
+    post:
+      summary: upload the image
+      operationId: imageclassification.upload_file
+      requestBody:
+        content:
+          image/*:
+            schema:
+              type: string
+              format: binary
+      responses:
+        '200':
+          description: File uploaded successfully
+          content:
+            application/json:
+              schema:
+                type: object
+
+  /claasify:
+    post:
+      summary: classify image using resnet-50
+      operationId: imageclassification.classify
+      requestBody:
+        content:
+          image/*:
+            schema:
+              type: string
+              format: binary
+      responses:
+        '200':
+          description: classified successfully
+          content:
+            text/csv:
+              schema:
+                type: string
+                format: binary
