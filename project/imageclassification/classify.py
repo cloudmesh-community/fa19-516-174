@@ -3,6 +3,9 @@ from keras.preprocessing import image
 from keras.applications.resnet50 import preprocess_input, decode_predictions
 import numpy as np
 
+#
+# use class or function this will not work with openapi
+
 model = ResNet50(weights='imagenet')
 
 img = image.load_img(temp.jpg)
