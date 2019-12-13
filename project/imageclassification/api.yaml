@@ -29,7 +29,7 @@ paths:
               schema:
                 type: object
 
-  /claasify:
+  /classify:
     post:
       summary: classify image using resnet-50
       operationId: imageclassification.classify

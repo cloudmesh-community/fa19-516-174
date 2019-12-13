@@ -19,12 +19,15 @@ def allowed_file(filename):
            filename.rsplit('.', 1)[1] in ALLOWED_EXTENSIONS
 
 def upload_file():
+
     file = request.files['file']
     if file and allowed_file(file.filename):
         filename = secure_filename(file.filename)
-        file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-        url = url_for('uploaded_file', filename=filename)
-        return url
+        numpy_image = image.img_to_array(filename)
+        image_batch = np.expand_dims(numpy_image, axis= 0)
+        processed_image = preprocess_input(image_batch,mode = 'caffe')
+
+        return processed_image
 
 def classify():
 
