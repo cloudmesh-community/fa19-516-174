@@ -31,7 +31,7 @@ def upload_file():
 
 def classify():
 
-    r = requests.get(upload_file.url)
+    r = requests.get(upload_file.processed_image)
     retJson = {}
 
     model = ResNet50(weights='imagenet')
