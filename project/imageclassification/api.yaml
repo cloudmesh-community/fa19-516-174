@@ -8,7 +8,7 @@ info:
   version: 0.0.1
 
 servers:
-  - url: http://localhost:5000/imageclassification
+  - url: http://localhost:8080/imageclassification
 
 paths:
   /upload:
