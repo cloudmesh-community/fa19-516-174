@@ -1,25 +1,28 @@
 import os
-import pymongo
+#import pymongo
 from flask import jsonify, request, render_template, url_for, Flask
 #from flask_restplus import Api, Resource
 import connexion
-from flask_pymongo import PyMongo
-from pymongo import MongoClient
+#from flask_pymongo import PyMongo
+#from pymongo import MongoClient
 from werkzeug.utils import secure_filename, redirect
+
+# http://0.0.0.0:8080/cloudmesh_ai/ui
+
+from cloudmesh.mongo.CmDatabase import CmDatabase
+
+cmdb = CmDatabase()
+db = cmdb.client["cloudmesh_ai"]
+
+data = db["files"]
+data.insert_one({"gregor": "hallo"})
+
+
 
 # Create the application instance
 app = connexion.FlaskApp(__name__, specification_dir="./")
 app.add_api("api.yaml")
-#app = Flask(__name__)
-#app.add_api("api.yaml")
-#app.config["MONGO_URI"] = "mongodb+srv://user:<user+password>@cluster0-av1n0.gcp.mongodb.net/test?retryWrites=true&w=majority"
-#mongo = PyMongo(app, uri="mongodb+srv://user:<user+password>@cluster0-av1n0.gcp.mongodb.net/test?retryWrites=true&w=majority")
-#client = MongoClient("mongodb+srv://user:<user+password>@cluster0-av1n0.gcp.mongodb.net/test?retryWrites=true&w=majority")
-#app.config['MONGO_URI'] = os.environ.get('DB')
-#mongo = PyMongo(app)
 
-# Read the yaml file to configure the endpoints
-#app.add_api("api.yaml")
 
 # create a URL route in our application for "/"
 @app.route("/")

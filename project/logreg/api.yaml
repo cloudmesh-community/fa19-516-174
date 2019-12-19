@@ -1,7 +1,7 @@
 openapi: 3.0.2
 info:
-  title: Logistic Regression
-  description: This is a logistic regression
+  title: Cloudmesh Logistic Regression
+  description: A Service to offer logistic regression
   license:
     name: Apache 2.0
     url: https://www.apache.org/licenses/LICENSE-2.0.html
@@ -11,7 +11,7 @@ servers:
   - url: http://localhost:8080/cloudmesh_ai
 
 paths:
-  /upload:
+  /file/upload:
     post:
       summary: upload input
       operationId: cloudmesh_ai.file.upload
