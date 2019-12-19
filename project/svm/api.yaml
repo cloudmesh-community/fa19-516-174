@@ -1,0 +1,87 @@
+openapi: 3.0.2
+info:
+  title: Support Vector Machine
+  description: This is a SVM model
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
+  version: 0.0.1
+
+servers:
+  - url: http://localhost:8080/svm
+
+paths:
+  /upload:
+    post:
+      summary: upload input
+      operationId: svm.upload_file
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                  format: binary
+      responses:
+        '200':
+          description: successful file upload
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  job_id:
+                    type: integer
+                  filename:
+                    type: string
+
+  /fit:
+    post:
+      summary: fit an svm model
+      operationId: svm.fit
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                job_id:
+                  type: integer
+                model_params:
+                  type: object
+                  additionalProperties: {}
+      responses:
+        '200':
+          description: labels of the provided points
+          content:
+            text/csv:
+              schema:
+                type: string
+                format: binary
+
+
+  /predict:
+    post:
+      summary: predict on a previously built model
+      operationId: svm.predict
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                job_id:
+                  type: string
+                file:
+                  type: string
+                  format: binary
+      responses:
+        '200':
+          description: successful completion
+          content:
+            text/csv:
+              schema:
+                type: string
+                format: binary
