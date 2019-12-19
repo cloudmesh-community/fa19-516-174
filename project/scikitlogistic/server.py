@@ -20,7 +20,7 @@ data.insert_one({"gregor": "hallo"})
 
 
 # Create the application instance
-app = connexion.FlaskApp(__name__, specification_dir="./")
+app = connexion.FlaskApp(__name__, specification_dir="../logreg/")
 app.add_api("api.yaml")
 
 
