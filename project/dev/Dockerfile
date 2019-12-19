@@ -8,7 +8,7 @@ WORKDIR /usr/src/app
 # creating a random python prg, thsi is about the integration into cloudmesh to
 # eleverage 1000o of thausends of lines of clever python code.
 #
-COPY requirements.txt ./
+COPY ../scikitlogistic/requirements.txt ./
 
 #
 # this is even more worng as you either mount this in volumes and do not do a
@@ -18,7 +18,7 @@ COPY requirements.txt ./
 
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY . .
+COPY ../logreg .
 
 #
 # pull missning here
