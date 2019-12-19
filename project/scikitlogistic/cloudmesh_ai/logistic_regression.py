@@ -1,16 +1,17 @@
 import pandas as pd
-from cloudmesh import mongo
-from flask import request
-from flask_pymongo import PyMongo
+import mongo
 from sklearn.feature_selection import SelectKBest, chi2
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score
-from .file import upload
 
 def fit(body):
     # Put input file in dataframe
-    train = pd.read_csv(upload.trainset, index_col=0)
-    test = pd.read_csv(upload.testset, index_col=0)
+
+    x = mongo.db.data.send_file(filename=trainfile)
+    y = mongo.db.data.send_file(filename=testfile)
+
+    train = pd.read_csv(x, index_col=0)
+    test = pd.read_csv(y, index_col=0)
 
     ytrain = train['labels']
     ytest = test['labels']
