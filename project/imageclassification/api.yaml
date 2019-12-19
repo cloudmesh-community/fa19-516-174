@@ -21,13 +21,15 @@ paths:
             schema:
               type: string
               format: binary
+
       responses:
         '200':
           description: File uploaded successfully
           content:
-            application/json:
+            image/*:
               schema:
-                type: object
+                type: string
+                format: binary
 
   /classify:
     post:

@@ -11,7 +11,7 @@ from werkzeug.utils import secure_filename
 
 # use cloudmesh shell
 
-UPLOAD_FOLDER = 'C:Users/Work/uploads'
+#UPLOAD_FOLDER = 'C:Users/Work/uploads'
 ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg'])
 
 def allowed_file(filename):
