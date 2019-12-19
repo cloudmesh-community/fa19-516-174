@@ -1,25 +1,22 @@
 from flask import jsonify
 import connexion
+from cloudmesh.mongo.CmDatabase import CmDatabase
+
+cmdb = CmDatabase()
+db = cmdb.client["Images"]
+
+data = db["image_files"]
+data.insert_one({"AI Services": "Image Classification"})
 
 # Create the application instance
-app = connexion.App(__name__, specification_dir="./")
-
-# Read the yaml file to configure the endpoints
+app = connexion.App(__name__, specification_dir="../imageclassification/")
 app.add_api("api.yaml")
 
 # create a URL route in our application for "/"
 @app.route("/")
 def home():
     msg = {"msg": "It's working!"}
-    return jsonify(msg)
-
-@app.route("/handleUpload", methods=['POST'])
-def handleFileUpload():
-    if 'photo' in request.files:
-        photo = request.files['photo']
-        if photo.filename != '':
-            photo.save(os.path.join('C:/Users/Public/Pictures', photo.filename))
-    return redirect(url_for('fileFrontPage'))
+    return jsonify(msg),
 
 if __name__ == "__main__":
     app.run(port=8080, debug=True)

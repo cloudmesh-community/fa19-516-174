@@ -1,37 +1,36 @@
-import os
+import mongo
 import numpy as np
-from flask import Flask, request, url_for, app, json
-from flask_restful import Api, Resource
-from pymongo import MongoClient
+from flask import request, json
 import requests
 from keras.applications.resnet50 import ResNet50
 from keras.preprocessing import image
 from keras.applications.resnet50 import preprocess_input, decode_predictions
 from werkzeug.utils import secure_filename
 
-# use cloudmesh shell
-
-#UPLOAD_FOLDER = 'C:Users/Work/uploads'
+# UPLOAD_FOLDER = 'C:Users/Work/uploads'
 ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg'])
+
 
 def allowed_file(filename):
     return '.' in filename and \
            filename.rsplit('.', 1)[1] in ALLOWED_EXTENSIONS
 
-def upload_file():
 
-    file = request.files['file']
-    if file and allowed_file(file.filename):
-        filename = secure_filename(file.filename)
-        numpy_image = image.img_to_array(filename)
-        image_batch = np.expand_dims(numpy_image, axis= 0)
-        processed_image = preprocess_input(image_batch,mode = 'caffe')
+def upload_file(file=None):
+    profileImage = request.files['file']
+    if profileImage and allowed_file(profileImage.filename):
+        img = secure_filename(profileImage.filename)
+        numpy_image = image.img_to_array(img)
+        image_batch = np.expand_dims(numpy_image, axis=0)
+        processed_image = preprocess_input(image_batch, mode='caffe')
+        mongo.save_file(processed_image.filename, processed_image)
+        mongo.db.data.insert({'image': processed_image.filename})
 
-        return processed_image
+        return 'Processed image saved in database'
 
-def classify():
 
-    r = requests.get(upload_file.processed_image)
+def classify(filename):
+    r = mongo.db.data.send_file(filename)
     retJson = {}
 
     model = ResNet50(weights='imagenet')
