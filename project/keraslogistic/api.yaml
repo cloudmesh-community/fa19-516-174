@@ -1,0 +1,87 @@
+openapi: 3.0.2
+info:
+  title: Cloudmesh Logistic Regression
+  description: A Service to offer logistic regression
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
+  version: 0.0.1
+
+servers:
+  - url: http://localhost:8080/cloudmesh_ai
+
+paths:
+  /file/upload:
+    post:
+      summary: upload input
+      operationId: cloudmesh_ai.file.upload
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                  format: binary
+      responses:
+        '200':
+          description: successful file upload
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  job_id:
+                    type: integer
+                  filename:
+                    type: string
+
+  /fit:
+    post:
+      summary: fit a logistic regression model
+      operationId: cloudmesh_ai.logistic_regression.fit
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                job_id:
+                  type: integer
+                model_params:
+                  type: object
+                  additionalProperties: {}
+      responses:
+        '200':
+          description: labels of the provided points
+          content:
+            text/csv:
+              schema:
+                type: string
+                format: binary
+
+
+  /predict:
+    post:
+      summary: predict on a previously built model
+      operationId: cloudmesh_ai.logistic_regression.predict
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                job_id:
+                  type: string
+                file:
+                  type: string
+                  format: binary
+      responses:
+        '200':
+          description: successful completion
+          content:
+            text/csv:
+              schema:
+                type: string
+                format: binary

@@ -1,0 +1,8 @@
+numpy
+flask
+dnspython
+connexion[swagger-ui]
+scikit-learn
+requests
+pymongo
+flask_pymongo
