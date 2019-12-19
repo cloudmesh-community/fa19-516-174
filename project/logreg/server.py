@@ -27,6 +27,11 @@ def home():
     msg = {"msg": "It's working!"}
     return jsonify(msg)
 
+#
+# this is actually being configures in the yaml file and not here in tha app.
+# the app has only starting the server based on the app configuration. other
+# than the home route this should not have any other routes
+#
 @app.route("/upload_file", methods=['POST'])
 def file_upload():
     return render_template("upload.html");

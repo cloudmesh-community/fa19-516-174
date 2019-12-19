@@ -4,6 +4,9 @@ Sahithi Ancha, sancha@iu.edu, [fa19-516-174](https://github.com/cloudmesh-commun
 
 :o2: please finish
 
+:o2: gregor also addea a README.md with some notes that chould be
+pointed to or integarted
+
 ## Abstract
 
 Creating REST services using open API.

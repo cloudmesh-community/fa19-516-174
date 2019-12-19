@@ -5,12 +5,12 @@ from flask_pymongo import PyMongo
 from sklearn.feature_selection import SelectKBest, chi2
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score
-
+from .file import upload
 
 def fit(body):
     # Put input file in dataframe
-    train = pd.read_csv(upload_file.trainset, index_col=0)
-    test = pd.read_csv(upload_file.testset, index_col=0)
+    train = pd.read_csv(upload.trainset, index_col=0)
+    test = pd.read_csv(upload.testset, index_col=0)
 
     ytrain = train['labels']
     ytest = test['labels']
@@ -41,21 +41,3 @@ def predict(body, file=None):
     print("The test accuracy for this logistic regression model is", acc)
 
     return
-
-
-def upload_file(file=None):
-    if 'trainfile' in request.files:
-        trainfile = request.files['trainfile']
-        mongo.save_file(trainfile.filename, trainfile)
-        mongo.db.users.insert(
-            {'username': request.form.get('username'),
-             'uploadfile_name': trainfile.filename})
-        trainset = mongo.db.users.find_one_or_404({'uploadfile_name': trainfile.filename})
-
-    if 'testfile' in request.files:
-        testfile = request.files['testfile']
-        mongo.save_file(testfile.filename, testfile)
-        mongo.db.users.insert({'username': request.form.get('username'), 'uploadfile_name': testfile.filename})
-        testset = mongo.db.users.find_one_or_404({'uploadfile_name': testfile.filename})
-
-    return 'File uploaded successfully', trainset, testset

@@ -8,13 +8,13 @@ info:
   version: 0.0.1
 
 servers:
-  - url: http://localhost:8080/log
+  - url: http://localhost:8080/cloudmesh_ai
 
 paths:
   /upload:
     post:
       summary: upload input
-      operationId: log.upload_file
+      operationId: cloudmesh_ai.file.upload
       requestBody:
         content:
           multipart/form-data:
@@ -40,7 +40,7 @@ paths:
   /fit:
     post:
       summary: fit a logistic regression model
-      operationId: log.fit
+      operationId: cloudmesh_ai.logistic_regression.fit
       requestBody:
         content:
           application/json:
@@ -65,7 +65,7 @@ paths:
   /predict:
     post:
       summary: predict on a previously built model
-      operationId: log.predict
+      operationId: cloudmesh_ai.logistic_regression.predict
       requestBody:
         content:
           multipart/form-data:
