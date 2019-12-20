@@ -1,22 +1,20 @@
-import mongo
-#from cloudmesh import mongo # ???
+from cloudmesh.mongo.CmDatabase import CmDatabase
 from flask import request
 
+cmdb = CmDatabase()
+db = cmdb.client["ai_services"]
+data = db["Dataset"]
 
 def upload(file=None):
 
-    if 'trainfile' in request.files:
-        trainfile = request.files['trainfile']
-        mongo.db.data.insert({"file": "trainfile"})
-        #mongo.save_file(trainfile.filename, trainfile)
-        #mongo.db.users.insert({'username': request.form.get('username'),'uploadfile_name': trainfile.filename})
-        trainset = mongo.db.data.find_one_or_404({'uploadfile_name': trainfile.filename})
+    filename = file.filename
+    data.insert_one(filename)
 
-    if 'testfile' in request.files:
-        testfile = request.files['testfile']
-        mongo.db.data.insert({"file": "testfile"})
-        #mongo.save_file(testfile.filename, testfile)
-        #mongo.db.users.insert({'username': request.form.get('username'), 'uploadfile_name': testfile.filename})
-        testset = mongo.db.data.find_one_or_404({'uploadfile_name': testfile.filename})
+#    if 'file' in request.files:
+#        file = request.files['file']
+#        data.save_file(file.filename, file)
+#        data.insert({'uploadfile_name': file.filename})
+        #f = data.find_one_or_404({'uploadfile_name': file.filename})
 
     return 'File uploaded successfully'
+
