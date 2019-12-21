@@ -3,10 +3,16 @@ import mongo
 from sklearn.feature_selection import SelectKBest, chi2
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score
+from cloudmesh.mongo.CmDatabase import CmDatabase
+
+cmdb = CmDatabase()
+db = cmdb.client["cloudmesh_ai"]
+data = db["files"]
 
 def fit(body):
     # Put input file in dataframe
 
+    f = col.find(predict.csv)
     x = mongo.db.data.send_file(filename=trainfile)
     y = mongo.db.data.send_file(filename=testfile)
 

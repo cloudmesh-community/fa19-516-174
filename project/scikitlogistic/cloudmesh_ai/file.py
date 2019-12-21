@@ -1,15 +1,5 @@
-from fileinput import filename
-
 import pandas as pd
-import requests
 from cloudmesh.mongo.CmDatabase import CmDatabase
-import os
-import io
-import flask
-from flask import request, url_for
-from flask_restful.inputs import url
-
-from werkzeug.utils import secure_filename
 
 cmdb = CmDatabase()
 #db = cmdb.client["cloudmesh"]
@@ -34,4 +24,4 @@ def upload(file=None):
 
     return result, 'File uploaded successfully'
 
-upload("predict.csv")
+upload("a4-test.csv")
