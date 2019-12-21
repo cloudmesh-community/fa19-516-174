@@ -1,5 +1,6 @@
 import pandas as pd
 from cloudmesh.mongo.CmDatabase import CmDatabase
+from flask import jsonify
 
 cmdb = CmDatabase()
 #db = cmdb.client["cloudmesh"]
@@ -18,10 +19,15 @@ def upload(file=None):
         # for browser, add 'redirect' function on top of 'url_for'
     # r = url_for('uploaded_file',filename=file.filename)
 
-    df = pd.read_csv(file)
-    dat = df.to_dict(orient = 'records')
-    result = data.insert_many(dat)
+    #df = pd.read_csv(file)
+    #dat = df.to_dict(orient = 'records')
+    #result = data.insert_many(dat)
 
-    return result, 'File uploaded successfully'
+    #return result, 'File uploaded successfully'
 
-upload("a4-test.csv")
+    r = {"name": file}
+
+    return jsonify(**r)
+
+if __name__ == "__main__":
+    upload("a4-test.csv")
