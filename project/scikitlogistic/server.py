@@ -7,13 +7,13 @@ import gridfs
 from cloudmesh.mongo.CmDatabase import CmDatabase
 
 cmdb = CmDatabase()
-db = cmdb.client["ai_services"]
+#db = cmdb.client["ai_services"]
 
-data = db["files"]
-data.insert_one({"AI Services": "Logistic regression and Image Classification"})
+#data = db["files"]
+#data.insert_one({"AI Services": "Logistic regression and Image Classification"})
 
 # Create the application instance
-app = connexion.App(__name__, specification_dir="../scikitlogistic/")
+app = connexion.App(__name__, specification_dir="./")
 app.add_api("api.yaml")
 
 # create a URL route in our application for "/"
