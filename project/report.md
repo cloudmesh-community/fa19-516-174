@@ -13,8 +13,7 @@ This project aims to provide an AI-service for the logistic regression functiona
 
 ## Introduction
 
-We implement REST services using open API and deploy AI services on them.
-We first create a server.py file that directs us to the api.yaml file that creates endpoints the user can access. 
+We first connect to the MongoDB database via the server file which also directs us to the Open Api scpecification which contains the endpoints for the user to access. I created a seperate python file to make uploading files by the user much easier. The uploaded file that is in the '.csv' format is converted to json and then uploaded to the database. When the user indicates that they want to fit and predict based on the dataset they provide, this same file is retrieved and then processed in order to fit a logistic regression model, predict values and also print out the accuracy score.
 
 ## Related Work
 
