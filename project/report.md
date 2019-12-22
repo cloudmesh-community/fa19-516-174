@@ -9,11 +9,12 @@ pointed to or integarted
 
 ## Abstract
 
-This project aims to provide an AI-service for the logistic regression functionality via two methods, namely Scikit-Learn and Keras. The user inputs a file which is saved to the MongoDB database. Then we retrieve the same file and perform logisctic regression on it according to the user input.
+This project aims to provide an AI-service for the logistic regression functionality via two methods, namely Scikit-Learn and Keras. The user inputs a file which is saved to the MongoDB database. Then we retrieve the same file and perform logisctic regression on it according to the user input, i.e., based on the service the user specifies.
 
 ## Introduction
 
 We implement REST services using open API and deploy AI services on them.
+We first create a server.py file that directs us to the api.yaml file that creates endpoints the user can access. 
 
 ## Related Work
 
