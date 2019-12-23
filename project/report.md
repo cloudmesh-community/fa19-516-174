@@ -26,6 +26,10 @@ Also, I can upload any file in the same directory with ease but if it's in a dif
 
 ## Architecture
 
+<p align="center">
+  <img src="https://github.com/cloudmesh-community/fa19-516-174/blob/master/sample/workflow.jpg" width="350">
+</p>
+
 ## Technologies used
 
 * cloudmesh
