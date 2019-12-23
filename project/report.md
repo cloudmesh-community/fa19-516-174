@@ -40,6 +40,7 @@ Also, I can upload any file in the same directory with ease but if it's in a dif
 * Set up the computer
 * Installed cloudmesh
 * Set up MongoDB
+* Used cloudmesh to connect to MongoDB and create a database and collection to which the user files are uploaded.
 * Uploaded files to MongoDB database
 * Wrote API programs for 4 AI services
 * Wrote programs for the Scikit-Learn and Keras Logistic Regression.
