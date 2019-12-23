@@ -18,6 +18,8 @@ We first connect to the MongoDB database via the server file which also directs 
 To connect to the MongoDB database, I used cloudmesh -> mongo -> cmdatabase.
 Also, I can upload any file in the same directory with ease but if it's in a different folder, this upload function does not work and I have to fix it. 
 
+Additionally, I also have a seperate Image classification API that is based on Keras. A pretrained model - ResNet 50 is used for this. An image is simply uploaded by the user. This image is initially stored on the database, retrieved and processed on request and the top three predictions for that particular image are returned as an output to the user.
+
 (To-do: 
 * I'm trying to figure out how to convert the json file back into a csv file before proscessing it. Alternatively, i'm also trying to save the csv file as it is without changing its format so that it's easier to retrieve and process.
 * I got the part of returning values after fitting them wrong and need to use Jsonify as Professor mentioned. While my program can fit and predict with an average accuracy score, I need to find a better way to pass the values returned from fit to the predict function.)
@@ -48,6 +50,7 @@ Also, I can upload any file in the same directory with ease but if it's in a dif
 * Uploaded files to MongoDB database
 * Wrote API programs for 4 AI services
 * Wrote programs for the Scikit-Learn and Keras Logistic Regression.
+* Finished the Image Classification API based on Keras. (I have an issue with uploading an image and have to find a way to do that.)
 
 ## Benchmark and Evaluation 
 
