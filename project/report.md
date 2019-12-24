@@ -20,7 +20,8 @@ Also, I can upload any file in the same directory with ease but if it's in a dif
 
 Additionally, I also have a seperate Image classification API that is based on Keras. A pretrained model - ResNet 50 is used for this. An image is simply uploaded by the user. This image is initially stored on the database, retrieved and processed on request and the top three predictions for that particular image are returned as an output to the user.
 
-(To-do: 
+To-do: 
+
 * I'm trying to figure out how to convert the json file back into a csv file before proscessing it. Alternatively, i'm also trying to save the csv file as it is without changing its format so that it's easier to retrieve and process.
 * I got the part of returning values after fitting them wrong and need to use Jsonify as Professor mentioned. While my program can fit and predict with an average accuracy score, I need to find a better way to pass the values returned from fit to the predict function.)
 
@@ -28,9 +29,8 @@ Additionally, I also have a seperate Image classification API that is based on K
 
 ## Architecture
 
-<p align="center">
-  <img src="https://github.com/cloudmesh-community/fa19-516-174/blob/master/sample/workflow.jpg" width="350">
-</p>
+![Architecture](images/workflow.jpg)
+
 
 ## Technologies used
 
