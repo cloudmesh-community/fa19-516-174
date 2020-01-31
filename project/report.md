@@ -29,7 +29,7 @@ Sahithi Ancha, sancha@iu.edu, [fa19-516-174](https://github.com/cloudmesh-commun
 :o2: this is not the aim its an example of our aim, you did not
 understand the large picture
 
-We aim to provide an AI-service for the logistic regression
+We try to develop an AI-service for the logistic regression
 functionality via two methods, namely Scikit-Learn and Keras. The user
 inputs a file which is saved to the MongoDB database. Then we retrieve
 the same file and perform logisctic regression on it according to the
