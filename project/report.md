@@ -71,14 +71,13 @@ To-do:
   predict with an average accuracy score, I need to find a better way to
   pass the values returned from fit to the predict function.)
 
-## Related Work
-
-## Architecture
+## Design 
+### Architecture
 
 ![Architecture](images/workflow.png){#fig:174-arch}
 
-## Technologies used
-
+## Implementation
+### Technologies Used
 * cloudmesh
 * Python
 * REST
@@ -86,7 +85,10 @@ To-do:
 * Flask
 * MongoDB
 
-## Benchmark and Evaluation 
+## Results
+### Deployment Benchmarks
+### Application Benchmarks
+### Benchmark and Evaluation 
 
 * Access and use the AI services 
 
