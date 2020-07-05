@@ -9,7 +9,7 @@ data = db["image_files"]
 data.insert_one({"AI Services": "Image Classification"})
 
 # Create the application instance
-app = connexion.App(__name__, specification_dir="../imageclassification/")
+app = connexion.App(__name__, specification_dir="/")
 app.add_api("api.yaml")
 
 # create a URL route in our application for "/"
