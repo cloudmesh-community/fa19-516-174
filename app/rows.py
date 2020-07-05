@@ -1,6 +1,0 @@
-
-
-
-upload()
-
-result()
