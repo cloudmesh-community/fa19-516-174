@@ -27,7 +27,7 @@ curl -X POST "http://34.74.93.11:5000/rf/predict" -H "accept: text/csv" -H "Cont
 ## Design 
 ### Architecture
 
-![Architecture](images/ar.png){#fig:174-arch}
+![Architecture](images/ar.png)
 
 ## Implementation
 ### Technologies Used
