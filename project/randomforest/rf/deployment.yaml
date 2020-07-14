@@ -1,0 +1,22 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: rf
+  labels:
+    #Project ID
+    app: cloudmesh-282704
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: cloudmesh-282704
+    spec:
+      #Container details
+      containers:
+        - name: rf
+          image: gcr.io/cloudmesh-282704/rf
+          imagePullPolicy: Always
+          #Ports to expose
+          ports:
+          - containerPort: 5000
