@@ -64,6 +64,12 @@ To-do:
 ## Appendix
 
 Results for Google Cloud-
-![Appendix](https://github.com/cloudmesh-community/fa19-516-174/blob/master/project/images/1.PNG){#fig:174-results}
-![Appendix](https://github.com/cloudmesh-community/fa19-516-174/blob/master/project/images/2.PNG){#fig:174-results}
-![Appendix](https://github.com/cloudmesh-community/fa19-516-174/blob/master/project/images/3.PNG){#fig:174-results}
+
+* Upload file
+![Appendix](https://github.com/cloudmesh-community/fa19-516-174/blob/master/project/images/1.PNG)
+
+* Specify parameters and fit
+![Appendix](https://github.com/cloudmesh-community/fa19-516-174/blob/master/project/images/2.PNG)
+
+* Predict a new file
+![Appendix](https://github.com/cloudmesh-community/fa19-516-174/blob/master/project/images/3.PNG)
