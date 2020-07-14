@@ -8,6 +8,8 @@ We try to develop a dockerized AI REST based service for the Random Forest funct
 
 ## Introduction
 
+A REST based OpenAPI service is created to provide Random Forest as a service. The implementation for this is obtained from Scikit-Learn as well as the K-means example provided by the Professor. This application is bundled together with a dockerfile that specifies instructions on how to deploy the app. The requirements.txt file specifies the packages required for the application to run. The docker image that is build using this file is pushed to the containers in each of the clouds. Based on this image, an application/service is created and run. 
+
 ## Design 
 ### Architecture
 
@@ -39,6 +41,8 @@ curl -X POST "http://34.74.93.11:5000/rf/fit" -H "accept: text/csv" -H "Content-
 
 To predict a file: 
 curl -X POST "http://34.74.93.11:5000/rf/predict" -H "accept: text/csv" -H "Content-Type: multipart/form-data" -F "job_id=0" -F "file=@<filename>.csv;type=text/csv"
+  
+Coming to the aws cloud however, 
 
 ## Results
 
