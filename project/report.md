@@ -42,7 +42,7 @@ curl -X POST "http://34.74.93.11:5000/rf/fit" -H "accept: text/csv" -H "Content-
 To predict a file: 
 curl -X POST "http://34.74.93.11:5000/rf/predict" -H "accept: text/csv" -H "Content-Type: multipart/form-data" -F "job_id=0" -F "file=@<filename>.csv;type=text/csv"
   
-Coming to the aws cloud however, 
+Coming to the AWS cloud, similar to the procedure followed for google, we create an account and add a new user (belonging to the cloudmesh security group) and give them EC2FullAccess perimission. The credetials file obtained will be used to interact with the cloud. The cloudmesh.yaml file is configured with the paramaters obtained. Then the cloud and key are visualised and a new vm is booted. This procedure is the same as mentioned in https://cloudmesh.github.io/cloudmesh-manual/accounts/aws.html. Next, a repository is created on AWS Elastic Container Registry. The docker image built is then pushed to this container. A task definition and cluster are created so that a service can be launched. However, in my case the end result when trying to access the IP shows the error code 502: Bad Gateway. I have tried other methods but nothing seems to work so far. However, I will keep trying and find out where I'm going wrong.
 
 ## Results
 
@@ -50,7 +50,7 @@ Being hosted on a google or aws server implies that the service is easily access
 
 ## Conclusion and Future Work
 
-While this app that has been deployed is a simple REST based OpenAPI service, multiple AI services can also be implemented as a single application. Much more complicated tasks such as Data Visualisation and analysing Time Series can also be implemented. A more interesting application would be to create an image classification app. To make it more user-friendly, a front-page can be developed as well.
+While this app that has been deployed is a simple REST based OpenAPI service, multiple AI services can also be implemented as a single application. Much more complicated tasks such as Data Visualisation and analysing Time Series can also be implemented. A more interesting application would be to create an image classification app. To make it more user-friendly, a front-page can be developed as well. I have also dabbled around with Chameleon and Oracle and hope to get a better understanding of the two. Travis CI didn't quiet work out for this project and I'm hoping I can integrate it in the future.
 
 ## References
 
@@ -59,6 +59,7 @@ While this app that has been deployed is a simple REST based OpenAPI service, mu
 * https://cloudmesh.github.io/cloudmesh-manual/accounts/aws.html
 * https://cloud.google.com/kubernetes-engine/docs/quickstarts/deploying-a-language-specific-app#python
 * https://scotch.io/tutorials/google-cloud-platform-i-deploy-a-docker-app-to-google-container-engine-with-kubernetes
+* https://docs.aws.amazon.com/AmazonECS/latest/developerguide/create-task-definition.html
 
 ## Appendix
 
