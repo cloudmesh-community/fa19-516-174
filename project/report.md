@@ -27,7 +27,7 @@ curl -X POST "http://34.74.93.11:5000/rf/predict" -H "accept: text/csv" -H "Cont
 ## Design 
 ### Architecture
 
-![Architecture](images/workflow.png){#fig:174-arch}
+![Architecture](https://github.com/cloudmesh-community/fa19-516-174/tree/master/project/images/ar.png){#fig:174-arch}
 
 ## Implementation
 ### Technologies Used
