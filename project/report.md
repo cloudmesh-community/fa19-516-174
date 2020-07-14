@@ -8,6 +8,22 @@ We try to develop a dockerized AI REST based service for the Random Forest funct
 
 ## Introduction
 
+## Design 
+### Architecture
+
+![Architecture](images/ar.png)
+
+## Implementation
+
+### Technologies Used
+* Cloudmesh
+* Python
+* REST
+* Open API
+* Flask
+* Google Cloud
+* AWS
+
 The first step is to create a simple service that demonstrates the random forest function. All the required files are bundled in an app and a Dockerfile is added as well. This same file is used to build an image later on for deploying onto the cloud services. The dockerfile tells the system to install the requirements and run the server file. This server file in turn points to the yaml file that specifies and configures the end points for our application. 
 
 The first cloud setup I've used is Google. I have created a project called cloudmesh (same as it was mentioned in the document), enabled the API and also created a service account key aand saved it as google.json in the ~/.cloudmesh/security folder and then registered it to cloudmesh. The entire procedure has been based on the document - https://cloudmesh.github.io/cloudmesh-manual/accounts/google/account.html. We create and connect to a cluster next. A docker image is built from the existing dockerfile. This image is then tagged and pushed to the google container registry. From this image we create a deployement using the deployment.yaml file, which makes it easier for us to configure any sepcifications we have. Once the deployment has been created, to be able to access it outside of the kubernetes cluster, we create a service and run it. Once created, an external IP address is provided, which we can use to run our curl commands. 
@@ -23,21 +39,6 @@ curl -X POST "http://34.74.93.11:5000/rf/fit" -H "accept: text/csv" -H "Content-
 
 To predict a file: 
 curl -X POST "http://34.74.93.11:5000/rf/predict" -H "accept: text/csv" -H "Content-Type: multipart/form-data" -F "job_id=0" -F "file=@<filename>.csv;type=text/csv"
-
-## Design 
-### Architecture
-
-![Architecture](images/ar.png)
-
-## Implementation
-### Technologies Used
-* cloudmesh
-* Python
-* REST
-* Open API
-* Flask
-* Google Cloud
-* AWS
 
 ## Results
 
