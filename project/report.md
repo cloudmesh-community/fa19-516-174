@@ -30,41 +30,17 @@ We try to develop a dockerized AI-service for the Random Forest functionality vi
 
 ## Introduction
 
-The first step is to create a simple service that demonstrates the random forest function. All the required files are bundled in an app and a Dockerfile is added as well. This same file is used to build an image later on for deploying onto the cloud services. 
+The first step is to create a simple service that demonstrates the random forest function. All the required files are bundled in an app and a Dockerfile is added as well. This same file is used to build an image later on for deploying onto the cloud services. The dockerfile tells the system to install the requirements and run the server file. This server file in turn points to the yaml file that specifies and configures the end points for our application. 
 
-We first connect to the MongoDB database via the server file which also
-directs us to the Open Api scpecification which contains the endpoints
-for the user to access. I created a seperate python file to make
-uploading files by the user much easier. The uploaded file that is in
-the '.csv' format is converted to json and then uploaded to the
-database. When the user indicates that they want to fit and predict
-based on the dataset they provide, this same file is retrieved and then
-processed in order to fit a logistic regression model, predict values
-and also print out the accuracy score.
+The first cloud setup I've used is Google. I have created a project called cloudmesh (same as it was mentioned in the document), enabled the API and also created a service account key aand saved it as google.json in the ~/.cloudmesh/security folder and then registered it to cloudmesh. The entire procedure has been based on the document - https://cloudmesh.github.io/cloudmesh-manual/accounts/google/account.html. We create and connect to a cluster next. A docker image is built from the existing dockerfile. This image is then tagged and pushed to the google container registry. From this image we create a deployement using the deployment.yaml file, which makes it easier for us to configure any sepcifications we have.
 
-To connect to the MongoDB database, I used cloudmesh -> mongo ->
-cmdatabase. Also, I can upload any file in the same directory with ease
-but if it's in a different folder, this upload function does not work
-and I have to fix it.
 
-Additionally, I also have a seperate Image classification API that is
-based on Keras. A pretrained model - ResNet 50 is used for this. An
-image is simply uploaded by the user. This image is initially stored on
-the database, retrieved and processed on request and the top three
-predictions for that particular image are returned as an output to the
-user.
+
+
+
 
 To-do: 
 
-* I'm trying to figure out how to convert the json file back into a csv
-  file before proscessing it. Alternatively, i'm also trying to save the
-  csv file as it is without changing its format so that it's easier to
-  retrieve and process.
-
-* I got the part of returning values after fitting them wrong and need
-  to use Jsonify as Professor mentioned. While my program can fit and
-  predict with an average accuracy score, I need to find a better way to
-  pass the values returned from fit to the predict function.)
 
 ## Design 
 ### Architecture
