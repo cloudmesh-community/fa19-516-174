@@ -29,7 +29,8 @@ To-do:
 * REST
 * Open API
 * Flask
-* MongoDB
+* Google Cloud
+* AWS
 
 ## Results
 ### Deployment Benchmarks
