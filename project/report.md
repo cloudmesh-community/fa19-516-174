@@ -1,28 +1,6 @@
 # AI REST Services using Open API
 
 Sahithi Ancha, sancha@iu.edu, [fa19-516-174](https://github.com/cloudmesh-community/fa19-516-174)
-
-
-## Issues
-
-* does not leverage cloudmesh you make your life to complex without it
-  dockerfile is questionable as mount or git clone not used (either one,
-  but the way you do the copy is not appropriate, as you can not easily
-  develop in your container and you make life to comples
-
-* docker mongo db container has security flaw as it does not set up
-  admin user, look at cloudmesh cmsd developed by TA. As he may not
-  have completed this this may be a reason for you to justify an
-  incomplete. E.g. his task was to deliver this some month back. I am
-  not sure if its usable at thsi time. he claims it is. Last friday it
-  was unclear. Get appointment with Ta to make sure this runs on your 
-  computer.
-
-* dnspython is somehow internally used by something, but is not
-  automatically installed for some reason. this is used for the mongodb
-  uri. This has to be further invertigated, as we shoudl not have to
-  explicitly include this in the requiremnts. I may be wrng on thsi
-  (Gregor)
   
 ## Abstract
 
@@ -33,9 +11,6 @@ We try to develop a dockerized AI-service for the Random Forest functionality vi
 The first step is to create a simple service that demonstrates the random forest function. All the required files are bundled in an app and a Dockerfile is added as well. This same file is used to build an image later on for deploying onto the cloud services. The dockerfile tells the system to install the requirements and run the server file. This server file in turn points to the yaml file that specifies and configures the end points for our application. 
 
 The first cloud setup I've used is Google. I have created a project called cloudmesh (same as it was mentioned in the document), enabled the API and also created a service account key aand saved it as google.json in the ~/.cloudmesh/security folder and then registered it to cloudmesh. The entire procedure has been based on the document - https://cloudmesh.github.io/cloudmesh-manual/accounts/google/account.html. We create and connect to a cluster next. A docker image is built from the existing dockerfile. This image is then tagged and pushed to the google container registry. From this image we create a deployement using the deployment.yaml file, which makes it easier for us to configure any sepcifications we have. Once the deployment has been created, to be able to access it outside of the kubernetes cluster, we create a service and run it. Once created, an external IP address is provided, which we can use to run our curl commands. 
-
-
-
 
 
 
