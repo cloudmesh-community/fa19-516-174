@@ -4,7 +4,7 @@ Sahithi Ancha, sancha@iu.edu, [fa19-516-174](https://github.com/cloudmesh-commun
   
 ## Abstract
 
-We try to develop a dockerized AI-service for the Random Forest functionality via Scikit-Learn. This application is deployed on Google cloud as well as AWS. The user should be able to access and run curl commands from their own terminal with the ip address provided. CSV files can be uploaded to fit and predict.
+We try to develop a dockerized AI REST based service for the Random Forest functionality via Scikit-Learn. This application is deployed on Google cloud as well as AWS. The user should be able to access and run curl commands from their own terminal with the ip address provided. CSV files can be uploaded to fit and predict.
 
 ## Introduction
 
@@ -41,12 +41,11 @@ curl -X POST "http://34.74.93.11:5000/rf/predict" -H "accept: text/csv" -H "Cont
 
 ## Results
 
+Being hosted on a google or aws server implies that the service is easily accessible from anywhere as long as we have the IP address to access it. This makes tasks such as fitting and predicting new data much easier while offloading tasks such as writing multiple files of code.
 
+## Conclusion and Future Work
 
-## Conclusion
-## Future Work
-
-Multiple AI services can be implemented as a single application. Or tasks such as Data Visualisation and analysing Time Series can be implemented. A more interesting application would be to create an image classification app.
+While this app that has been deployed is a simple REST based OpenAPI service, multiple AI services can also be implemented as a single application. Much more complicated tasks such as Data Visualisation and analysing Time Series can also be implemented. A more interesting application would be to create an image classification app. To make it more user-friendly, a front-page can be developed as well.
 
 ## References
 
