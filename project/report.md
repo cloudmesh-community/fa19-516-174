@@ -26,16 +26,11 @@ Sahithi Ancha, sancha@iu.edu, [fa19-516-174](https://github.com/cloudmesh-commun
   
 ## Abstract
 
-:o2: this is not the aim its an example of our aim, you did not
-understand the large picture
-
-We try to develop an AI-service for the logistic regression
-functionality via two methods, namely Scikit-Learn and Keras. The user
-inputs a file which is saved to the MongoDB database. Then we retrieve
-the same file and perform logisctic regression on it according to the
-user input, i.e., based on the service the user specifies.
+We try to develop a dockerized AI-service for the Random Forest functionality via Scikit-Learn. This application is deployed on Google cloud as well as AWS. The user should be able to access and run curl commands from their own terminal with the ip address provided. CSV files can be uploaded to fit and predict.
 
 ## Introduction
+
+The first step is to create a simple service that demonstrates the random forest function. All the required files are bundled in an app and a Dockerfile is added as well. This same file is used to build an image later on for deploying onto the cloud services. 
 
 We first connect to the MongoDB database via the server file which also
 directs us to the Open Api scpecification which contains the endpoints
