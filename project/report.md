@@ -1,4 +1,4 @@
-# AI REST Service using Open API
+# AI REST Service using Open API on Google and AWS
 
 Sahithi Ancha, sancha@iu.edu, [fa19-516-174](https://github.com/cloudmesh-community/fa19-516-174)
   
