@@ -64,4 +64,6 @@ To-do:
 ## Appendix
 
 Results for Google Cloud-
-![Architecture](images/workflow.png){#fig:174-arch}
+![Appendix](images/1.png){#fig:174-results}
+![Appendix](images/2.png){#fig:174-results}
+![Appendix](images/3.png){#fig:174-results}
