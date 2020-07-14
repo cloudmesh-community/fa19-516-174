@@ -41,14 +41,12 @@ curl -X POST "http://34.74.93.11:5000/rf/predict" -H "accept: text/csv" -H "Cont
 
 ## Results
 
-### Deployment Benchmarks
-### Application Benchmarks
-### Benchmark and Evaluation 
 
-* Access and use the AI services -
-For this, we will need to be able to run the above mention curl commands from the terminal. This has been done seamlessly and there are no issues with google cloud.
 
 ## Conclusion
+## Future Work
+
+Multiple AI services can be implemented as a single application. Or tasks such as Data Visualisation and analysing Time Series can be implemented. A more interesting application would be to create an image classification app.
 
 ## References
 
