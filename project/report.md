@@ -24,11 +24,6 @@ curl -X POST "http://34.74.93.11:5000/rf/fit" -H "accept: text/csv" -H "Content-
 To predict a file: 
 curl -X POST "http://34.74.93.11:5000/rf/predict" -H "accept: text/csv" -H "Content-Type: multipart/form-data" -F "job_id=0" -F "file=@<filename>.csv;type=text/csv"
 
-
-
-To-do: 
-
-
 ## Design 
 ### Architecture
 
@@ -46,20 +41,19 @@ To-do:
 
 ## Results
 
-
-
-
 ### Deployment Benchmarks
 ### Application Benchmarks
 ### Benchmark and Evaluation 
 
-* Access and use the AI services 
+* Access and use the AI services -
+For this, we will need to be able to run the above mention curl commands from the terminal. This has been done seamlessly and there are no issues with google cloud.
 
 ## Conclusion
 
 ## References
 
-*
+* https://cloud.google.com/kubernetes-engine/docs/quickstarts/deploying-a-language-specific-app#python
+* https://scotch.io/tutorials/google-cloud-platform-i-deploy-a-docker-app-to-google-container-engine-with-kubernetes
 
 ## Appendix
 
