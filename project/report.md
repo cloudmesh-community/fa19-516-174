@@ -46,7 +46,7 @@ Coming to the AWS cloud, similar to the procedure followed for google, we create
 
 ## Results
 
-Being hosted on a google or aws server implies that the service is easily accessible from anywhere as long as we have the IP address to access it. This makes tasks such as fitting and predicting new data much easier while offloading tasks such as writing multiple files of code.
+Being hosted on a google or aws server implies that the service is easily accessible from anywhere as long as we have the IP address to access it. This makes tasks such as fitting and predicting new data much easier while offloading tasks such as writing multiple files of code. Also, I compared the usage of the two clouds on the basis of the following- cost, ease of usage and resources available. I find that google cloud was easier to deploy the application on, as compared to the AWS cloud. Also, using Google cloud meant that I did not have to end up paying extra even if I kept the application running unlike AWS cloud, where I often had to pay extra whenever I exceeded the free tier limit. While both clouds had extensive documentation done by their respective organizations, external resources for Google cloud were more widely available and easy to comprehend. Google cloud was also easier to access and manage via cloudmesh. 
 
 ## Conclusion and Future Work
 
