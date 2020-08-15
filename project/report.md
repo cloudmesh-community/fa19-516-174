@@ -50,7 +50,7 @@ Being hosted on a google or aws server implies that the service is easily access
 
 ## Conclusion and Future Work
 
-While this app that has been deployed is a simple REST based OpenAPI service, multiple AI services can also be implemented as a single application. Much more complicated tasks such as Data Visualisation and analysing Time Series can also be implemented. A more interesting application would be to create an image classification app. To make it more user-friendly, a front-page can be developed as well. I have also dabbled around with Chameleon and Oracle and hope to get a better understanding of the two. Travis CI didn't quiet work out for this project and I'm hoping I can integrate it in the future.
+While this app that has been deployed is a simple REST based OpenAPI service, multiple AI services can also be implemented as a single application. Much more complicated tasks such as Data Visualisation and analysing Time Series can also be implemented. A more interesting application would be to create an image classification app. To make it more user-friendly, a front-page can be developed as well.
 
 ## References
 
